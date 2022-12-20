@@ -4,7 +4,15 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import profe1 from "../assets/profe1.png";
+import profe2 from "../assets/profe2.png";
+import profe3 from "../assets/profe3.png";
+import profe4 from "../assets/profe4.png";
+import profe5 from "../assets/profe5.png";
+import profe6 from "../assets/profe6.png";
 
+const fotos = [profe1, profe2, profe3, profe4, profe5, profe6];
+const nombres =["Lara","Esteban","Oscar","Daniela","Ana","Rodrigo"]
+const carreras =["Derecho","Computación","Ciencias","Odontologia","Medicina","Psicologia"]
 
 const Comienzo = () => {
   return (
@@ -53,10 +61,10 @@ const Comienzo = () => {
             {Array.from({ length: 6 }).map((_, idx) => (
               <Col>
                 <Card>
-                  <Card.Img variant="top" src={profe1} />
+                  <Card.Img variant="top" src={fotos[idx]} />
                   <Card.Body>
-                    <Card.Title>Card title</Card.Title>
-                    <Card.Text>Profesores destacados</Card.Text>
+                    <Card.Title>{nombres[idx]}</Card.Title>
+                    <Card.Text>Carrera: {carreras[idx]}</Card.Text>
                   </Card.Body>
                 </Card>
               </Col>

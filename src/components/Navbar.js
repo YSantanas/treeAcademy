@@ -19,7 +19,7 @@ const navbar = () => {
             <Nav.Link href="/inicio">Inicio</Nav.Link>
             <Nav.Link href="/registro">Registro</Nav.Link>
             <NavDropdown title="Cursos" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/curso1">curso 1</NavDropdown.Item>
+              <NavDropdown.Item href="/catalogo">Catologo</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 curso 2
               </NavDropdown.Item>
