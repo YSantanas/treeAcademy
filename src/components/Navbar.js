@@ -12,11 +12,11 @@ const navbar = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="info" variant="dark">
       <Container>
-        <Navbar.Brand href="/Comienzo">Tree Academy</Navbar.Brand>
+        <Navbar.Brand href="/">Tree Academy</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/inicio">Inicio</Nav.Link>
+            <Nav.Link href="/acerca">Acerca</Nav.Link>
             <Nav.Link href="/registro">Registro</Nav.Link>
             <NavDropdown title="Cursos" id="collasible-nav-dropdown">
               <NavDropdown.Item href="/catalogo">Catologo</NavDropdown.Item>
@@ -31,7 +31,7 @@ const navbar = () => {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">Login</Nav.Link>
+            <Nav.Link href="/login">Login</Nav.Link>
 
           </Nav>
         </Navbar.Collapse>
