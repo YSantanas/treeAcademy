@@ -10,7 +10,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const navbar = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="info" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand href="/">Tree Academy</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
