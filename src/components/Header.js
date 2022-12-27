@@ -7,18 +7,24 @@ import Galeria1 from '../assets/carrusel/galeria1.png';
 import Galeria2 from '../assets/carrusel/galeria2.png';
 import Galeria3 from '../assets/carrusel/galeria3.png';
 
+import Col from "react-bootstrap/Col";
+
+import Row from "react-bootstrap/Row";
 
 
 const Header = () => {
   return (
-    <div  expand="lg">
-     
+    <div
+     expand="lg"
+ 
+  >
+    <Row >
+      <Col md={5}>
 
-
-     <Carousel fade>
+    <Carousel fade>
       <Carousel.Item>
         <img
-          className="d-block mx-auto img-fluid"
+          className="d-block w-100 h-auto"
           src={Galeria1}
           alt="First slide"
         />
@@ -29,8 +35,8 @@ const Header = () => {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block mx-auto img-fluid"
-          src={Galeria2}
+          className="d-block w-100 h-auto"
+          src={Galeria1}
           alt="Second slide"
         />
 
@@ -41,8 +47,8 @@ const Header = () => {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block mx-auto img-fluid"
-          src={Galeria3}
+          className="d-block w-100 h-auto"
+          src={Galeria1}
           alt="Third slide"
         />
 
@@ -52,7 +58,13 @@ const Header = () => {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+
+
+    </Col>
+    </Row>
     </div>
+
+
   );
 }
 
