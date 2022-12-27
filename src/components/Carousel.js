@@ -1,7 +1,7 @@
 import { Carousel as AntCarousel } from 'antd';
-import Galeria1 from '../assets/carrusel/galeria1.png';
-import Galeria2 from '../assets/carrusel/galeria2.png';
-import Galeria3 from '../assets/carrusel/galeria3.png';
+import Inicio1 from '../assets/carrusel/inicio1.jpg';
+import Inicio2 from '../assets/carrusel/inicio2.jpg';
+import Inicio3 from '../assets/carrusel/inicio3.jpg';
 
 const contentStyle = {
   margin: 0,
@@ -14,7 +14,7 @@ const imageStyle = {
   height: 'auto',
 };
 
-const images = [Galeria1, Galeria2, Galeria3];
+const images = [Inicio1, Inicio2, Inicio3];
 
 export const Carousel = () => {
   const onChange = (currentSlide) => {
