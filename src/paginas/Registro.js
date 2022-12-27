@@ -1,16 +1,15 @@
-import React from "react";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import Arbol from "../assets/logoArbol.png";
+import React from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 const registro = () => {
   return (
     <div
       class=" container border justify-content-center alert alert-light"
-      style={{ minHeight: "auto", paddingTop: "2vh", marginTop: "5vh" }}
+      style={{ minHeight: 'auto', paddingTop: '2vh', marginTop: '5vh' }}
     >
       <h1 class="text-center text-info">Registro</h1>
-      <Form >
+      <Form>
         <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label>Nombre</Form.Label>
           <Form.Control type="name" placeholder="name" />
@@ -42,13 +41,12 @@ const registro = () => {
           <Form.Label>Imagen de perfil</Form.Label>
           <Form.Control type="file" size="lg" />
         </Form.Group>
-        
-        <div class="col-md-12 text-center ">
-        <Button   variant="primary" type="submit">
-          Enviar
-        </Button>
-        </div>
 
+        <div class="col-md-12 text-center ">
+          <Button variant="primary" type="submit">
+            Enviar
+          </Button>
+        </div>
       </Form>
     </div>
   );

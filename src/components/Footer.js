@@ -1,6 +1,4 @@
-import React from "react";
-
-function Footer() {
+const Footer = () => {
   return (
     <div class="d-flex justify-content-center gap-5 pb-6 bg-light">
       <footer className="text-center text-lg-start bg-light text-muted">
@@ -9,13 +7,13 @@ function Footer() {
         </div>
         <div className="text-center p-2">
           © Copyright:
-          <a className="text-reset fw-bold" title="/">
+          <a className="text-reset fw-bold" title="/" href="#!">
             Tree Academy
           </a>
         </div>
       </footer>
     </div>
   );
-}
+};
 
 export default Footer;
