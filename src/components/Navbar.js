@@ -4,13 +4,15 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-
+import Arbol from '../assets/logoArbol.png';
 
 
 
 const navbar = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <img src={Arbol} alt="" width="50" height="45" class="mx-auto"></img>
+     
       <Container>
         <Navbar.Brand href="/">Tree Academy</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
