@@ -11,24 +11,28 @@ import Registro from './paginas/Registro';
 import Cursos from './paginas/Cursos';
 import Inicio from './paginas/Inicio';
 import Login from './paginas/Login';
+import { Provider } from 'react-redux';
+import { store } from './app/store';
 
-function App() {
+const App = () => {
   return (
-    <Router>
-      <RBNavbar />
-      <Header />
+    <Provider store={store}>
+      <Router>
+        <RBNavbar />
+        <Header />
 
-      <Routes>
-        <Route path="/registro" element={<Registro />} />
-        <Route path="/catalogo" element={<Cursos />} />
-        <Route path="/acerca" element={<Inicio />} />
-        <Route path="/" element={<Comienzo />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
+        <Routes>
+          <Route path="/registro" element={<Registro />} />
+          <Route path="/catalogo" element={<Cursos />} />
+          <Route path="/acerca" element={<Inicio />} />
+          <Route path="/" element={<Comienzo />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
 
-      <Footer />
-    </Router>
+        <Footer />
+      </Router>
+    </Provider>
   );
-}
+};
 
 export default App;

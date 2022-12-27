@@ -22,7 +22,7 @@ export const Carousel = () => {
   };
 
   return (
-    <AntCarousel afterChange={onChange}>
+    <AntCarousel afterChange={onChange} autoplay autoplaySpeed={5_000}>
       {images.map((image) => (
         <div key={image}>
           <div style={contentStyle}>

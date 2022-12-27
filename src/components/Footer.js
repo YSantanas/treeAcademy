@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div class="d-flex justify-content-center gap-5 pb-6 bg-light">
+    <div className="d-flex justify-content-center gap-5 pb-6 bg-light">
       <footer className="text-center text-lg-start bg-light text-muted">
         <div className="row mt-3">
           <h4>Las ramas del conocimiento.</h4>

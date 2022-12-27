@@ -1,29 +1,27 @@
-import React from "react";
-import { Button, Checkbox, Form, Input } from "antd";
-import Login1 from "../assets/login1.png";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+import React from 'react';
+import { Button, Checkbox, Form, Input } from 'antd';
+import Login1 from '../assets/login1.png';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 const inicio = () => {
   const onFinish = (values) => {
-    console.log("Success:", values);
+    console.log('Success:', values);
   };
   const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
+    console.log('Failed:', errorInfo);
   };
   return (
     <div
-      class="container pt-3 border alert alert-light text-center"
-      style={{ minHeight: "auto", paddingTop: "2vh", marginTop: "5vh" }}
+      className="container pt-3 border alert alert-light text-center"
+      style={{ minHeight: 'auto', paddingTop: '2vh', marginTop: '5vh' }}
     >
-      <h1 class="text-info text-center mb-3">Iniciar Sesión</h1>
+      <h1 className="text-info text-center mb-3">Iniciar Sesión</h1>
 
       <Row>
         <Col>
-          <img src={Login1} class="justify-content-center" alt="logo" />
+          <img src={Login1} className="justify-content-center" alt="logo" />
         </Col>
-
-
 
         <Col>
           <Form
@@ -48,7 +46,7 @@ const inicio = () => {
               rules={[
                 {
                   required: true,
-                  message: "Por favor, introduce tu nombre!",
+                  message: 'Por favor, introduce tu nombre!',
                 },
               ]}
             >
@@ -61,7 +59,7 @@ const inicio = () => {
               rules={[
                 {
                   required: true,
-                  message: "Por favor, introduce tu contraseña!",
+                  message: 'Por favor, introduce tu contraseña!',
                 },
               ]}
             >
