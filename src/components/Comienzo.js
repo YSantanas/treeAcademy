@@ -29,9 +29,9 @@ const Comienzo = () => {
     >
       <h1 className="text-center">Tree Academy</h1>
 
-      <Row xs={1} md={2} className="g-2">
-        <Col className="col-md-3 pl-5">
-          <div className="alert alert-info">
+      <Row xs={1} md={2} className="g-2 justify-content-center">
+        <Col className="col-md-3 pl-5 w-50">
+          <div className="alert alert-info  w-100">
             <h1>Objetivo:</h1>
             <p>hola objetivo</p>
             <hr />
@@ -39,7 +39,7 @@ const Comienzo = () => {
           </div>
         </Col>
 
-        <Col className="col-md-3 pl-5">
+        <Col className="col-md-3 pl-5 w-50">
           <div className="alert alert-info">
             <h1>Vision:</h1>
 
