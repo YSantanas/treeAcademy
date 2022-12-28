@@ -14,7 +14,11 @@ const Planes = () => {
         Planes
       </h1>
 
-      <Row xs={1} md={3} className="g-4 justify-content-center mb-5">
+      <Row
+        xs={1}
+        md={3}
+        className="g-4 justify-content-center mb-5 align-items-center"
+      >
         <Col className="col-md-3">
           <div>
             <header
