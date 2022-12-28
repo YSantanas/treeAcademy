@@ -18,7 +18,7 @@ const images = [Inicio1, Inicio2, Inicio3];
 
 export const Carousel = () => {
   const onChange = (currentSlide) => {
-    console.log(currentSlide);
+    // console.log(currentSlide);
   };
 
   return (
