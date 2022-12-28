@@ -10,7 +10,7 @@ const Planes = () => {
     <div className="container mt-2 mb-3">
 
 
-      <h1 className="text-center text-info pb-3" style={{ minHeight: 'auto', paddingTop: '2vh', marginTop: '5vh' }}>Registro</h1>
+      <h1 className="text-center text-info pb-3" style={{ minHeight: 'auto', paddingTop: '2vh', marginTop: '5vh' }}>Planes</h1>
 
       <Row xs={1} md={3} className="g-2 justify-content-center">
         <Col className="col-md-3 pl-5">
