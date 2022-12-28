@@ -13,6 +13,7 @@ import Inicio from './paginas/Inicio';
 import Login from './paginas/Login';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
+import Planes from './paginas/Planes';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/registro" element={<Registro />} />
           <Route path="/catalogo" element={<Cursos />} />
           <Route path="/acerca" element={<Inicio />} />
+          <Route path="/planes" element={<Planes />} />
           <Route path="/" element={<Comienzo />} />
           <Route path="/login" element={<Login />} />
         </Routes>
