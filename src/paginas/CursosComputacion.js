@@ -3,7 +3,6 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
 import {
-
   Center,
   Image,
   Heading,
@@ -36,16 +35,15 @@ const descripcion = [
 
 function CursosComputacion() {
   return (
-    
-   
-      <div className="container mt-2 mb-3">
-        <Center>
-<Heading fontSize='50px'  h='100px' color='black'>Cursos de Computación
-</Heading>
-</Center>
-       
-        <ChakraProvider>
-        <Row xs={1} md={2} className="g-2 justify-content-center">
+    <div className="container mt-2 mb-3">
+      <Center>
+        <Heading fontSize="50px" h="50px" color="black" mb={5}>
+          Cursos de Computación
+        </Heading>
+      </Center>
+
+      <ChakraProvider>
+        <Row xs={1} md={2} className="g-2 justify-content-center mt-5">
           {Array.from({ length: 6 }).map((_, idx) => (
             <Col className="col-md-3 pl-5 w-50">
               <Card
@@ -54,8 +52,10 @@ function CursosComputacion() {
                 variant="outline"
               >
                 <Image
+                
                   objectFit="cover"
                   maxW={{ base: "100%", sm: "200px" }}
+                  boxSize='100%'
                   src={fotos[idx]}
                   alt=""
                 />
@@ -64,9 +64,7 @@ function CursosComputacion() {
                   <CardBody>
                     <Heading size="md">{nombres[idx]}</Heading>
 
-                    <Text py="2">
-                    {descripcion[idx]}
-                    </Text>
+                    <Text py="2">{descripcion[idx]}</Text>
                   </CardBody>
 
                   <CardFooter>
@@ -79,9 +77,8 @@ function CursosComputacion() {
             </Col>
           ))}
         </Row>
-        </ChakraProvider>
-      </div>
-    
+      </ChakraProvider>
+    </div>
   );
 }
 
