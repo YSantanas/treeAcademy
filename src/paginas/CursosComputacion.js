@@ -3,8 +3,8 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
 import {
-  Box,
-  SimpleGrid,
+
+  Center,
   Image,
   Heading,
   CardBody,
@@ -36,10 +36,15 @@ const descripcion = [
 
 function CursosComputacion() {
   return (
-    <ChakraProvider>
+    
+   
       <div className="container mt-2 mb-3">
-        <h1 className="text-center text-dark py-3">CursosComputacion</h1>
-
+        <Center>
+<Heading fontSize='50px'  h='100px' color='black'>Cursos de Computación
+</Heading>
+</Center>
+       
+        <ChakraProvider>
         <Row xs={1} md={2} className="g-2 justify-content-center">
           {Array.from({ length: 6 }).map((_, idx) => (
             <Col className="col-md-3 pl-5 w-50">
@@ -74,8 +79,9 @@ function CursosComputacion() {
             </Col>
           ))}
         </Row>
+        </ChakraProvider>
       </div>
-    </ChakraProvider>
+    
   );
 }
 

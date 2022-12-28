@@ -1,58 +1,66 @@
-
-
-import { NavLink } from 'react-router-dom';
 import { ChakraProvider } from "@chakra-ui/react";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+import { NavLink } from "react-router-dom";
 
 import {
   Box,
   SimpleGrid,
-  Image,
-  Heading,
-  CardBody,
-  Card,
-  Stack,
-  Text,
-  Button,
-  CardFooter,
-  Grid,
-  GridItem
+  Center,
+  Heading
 } from "@chakra-ui/react";
-
-const gridStyle = {
-  width: '15%',
-  textAlign: 'center',
-  margin: '2px',
-  
-  background: '#ECF6FF'
-};
-
-
 
 const Cursos = () => {
   return (
-    <ChakraProvider>
-    <div
-      className="container mt-2 mb-3"
-      
-    >
-       <h1 className="text-center text-dark py-3">Cátalogo</h1>
-     
+    
+    <div className="container mt-2 mb-3">
+<Center>
+<Heading fontSize='50px'  h='100px' color='black'>Cátalogo
+</Heading>
+</Center>
 
+      <ChakraProvider>
+        <SimpleGrid
+          bg="blue.50"
+          columns={{ sm: 2, md: 4 }}
+          spacing="8"
+          p="10"
+          textAlign="center"
+          rounded="lg"
+          color="gray.500"
+        >
+          <Box boxShadow="2xl" p="6" rounded="md" bg="white" as='a'  color='blue.400' href='./CursosComputacion'  fontWeight='bold'>
+            Ingenieria
+          </Box>
+          <Box boxShadow="2xl" p="6" rounded="md" bg="white" as='a' color='blue.400' href='#'  fontWeight='bold'>
+            Derecho
+          </Box>
+          <Box boxShadow="2xl" p="6" rounded="md" bg="white" as='a' color='blue.400' href='#'  fontWeight='bold'>
+            Psicologia
+          </Box>
+          <Box boxShadow="2xl" p="6" rounded="md" bg="white" as='a' color='blue.400' href='#'  fontWeight='bold'>
+            Odontologia
+          </Box>
+          <Box boxShadow="2xl" p="6" rounded="md" bg="white" as='a' color='blue.400' href='#'  fontWeight='bold'>
+            Medicina
+          </Box>
+          <Box boxShadow="2xl" p="6" rounded="md" bg="white" as='a' color='blue.400' href='#'  fontWeight='bold'>
+            Veterinaria
+          </Box>
+          <Box boxShadow="2xl" p="6" rounded="md" bg="white" as='a' color='blue.400' href='#'  fontWeight='bold'>
+            Filosofia
+          </Box>
 
-
-
-  <Grid templateColumns='repeat(5, 1fr)' gap={6}>
-  <GridItem w='100%' h='10' bg='blue.500' />
-  <GridItem w='100%' h='10' bg='blue.500' />
-  <GridItem w='100%' h='10' bg='blue.500' />
-  <GridItem w='100%' h='10' bg='blue.500' />
-  <GridItem w='100%' h='10' bg='blue.500' />
-</Grid>
-
+          <Box boxShadow="2xl" p="6" rounded="md" bg="white" as='a' color='blue.400' href='#'  fontWeight='bold'>
+            Dark lg
+          </Box>
+          <Box boxShadow="2xl" p="6" rounded="md" bg="white" as='a' color='blue.400' href='#'  fontWeight='bold'>
+            Outline
+          </Box>
+          <Box boxShadow="2xl" p="6" rounded="md" bg="white" as='a' color='blue.400' href='#'  fontWeight='bold'>
+            Inner
+          </Box>
+        </SimpleGrid>
+      </ChakraProvider>
     </div>
-    </ChakraProvider>
   );
 };
 
