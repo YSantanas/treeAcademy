@@ -108,7 +108,7 @@ const Planes = () => {
                   <li type="disc">Tiempo ilimitado al contenido.</li>
                   <li type="disc">Certificación incluida</li>
                   <li type="disc">
-                    Acceder a clases Sincronas con posibilidad de grabación si
+                    Acceder a clases Sincronas con grabación si
                     el usuario lo desea.
                   </li>
                 </ul>
