@@ -25,9 +25,10 @@ const Comienzo = () => {
   return (
     <div
       className="container text-center text-wite bg-white text-muted"
-      style={{ minHeight: '100vh' }}
+      style={{ minHeight: "80vh", paddingTop: "2vh",textAlign:"center" }}
     >
-      <h1 className="text-center text-info pb-3" style={{ minHeight: 'auto', paddingTop: '2vh', marginTop: '5vh' }}>Tree Academy</h1>
+      
+      <h1 className="text-center text-info">Tree Academy</h1>
 
       <Row xs={1} md={2} className="g-2 justify-content-center">
         <Col className="col-md-3 pl-5 w-50">
