@@ -7,20 +7,11 @@ import { Badge } from 'antd';
 const Planes = () => {
   return (
     <div className="container mt-2 mb-3">
-      <h1
-        className="text-center text-info pb-3"
-        style={{ minHeight: 'auto', paddingTop: '2vh', marginTop: '5vh' }}
-      >
-        Planes
-      </h1>
+      <h1 className="text-center text-info py-3">Planes</h1>
 
-      <Row
-        xs={1}
-        md={3}
-        className="g-4 justify-content-center mb-5 align-items-center"
-      >
-        <Col className="col-md-3">
-          <div>
+      <Row className="g-4 mb-5 align-items-center h-100 justify-content-center">
+        <Col xs={12} lg={4} xl={3}>
+          <div className="h-100">
             <header
               className="text-white p-3 rounded-top"
               style={{ background: '#009EFF' }}
@@ -53,7 +44,7 @@ const Planes = () => {
           </div>
         </Col>
 
-        <Col className="col-md-3">
+        <Col xs={12} lg={4} xl={3}>
           <div>
             <header
               className="text-white p-3 rounded-top"
@@ -88,7 +79,7 @@ const Planes = () => {
           </div>
         </Col>
 
-        <Col className="col-md-3">
+        <Col xs={12} lg={4} xl={3}>
           <div>
             <header
               className="text-white p-3 rounded-top"
@@ -108,8 +99,8 @@ const Planes = () => {
                   <li type="disc">Tiempo ilimitado al contenido.</li>
                   <li type="disc">Certificación incluida</li>
                   <li type="disc">
-                    Acceder a clases Sincronas con grabación si
-                    el usuario lo desea.
+                    Acceder a clases Sincronas con grabación si el usuario lo
+                    desea.
                   </li>
                 </ul>
               </div>
