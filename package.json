@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@chakra-ui/react": "^2.4.5",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.11.2",
@@ -15,6 +16,7 @@
     "better-react-carousel": "^1.1.1",
     "bootstrap": "^5.2.3",
     "formik": "^2.2.9",
+    "framer-motion": "^8.0.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",
