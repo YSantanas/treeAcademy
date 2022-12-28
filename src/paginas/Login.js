@@ -16,7 +16,7 @@ const inicio = () => {
       className="container pt-3 border alert alert-light text-center"
       style={{ minHeight: 'auto', paddingTop: '2vh', marginTop: '5vh' }}
     >
-      <h1 className="text-info text-center mb-3">Iniciar Sesión</h1>
+      <h1 className="text-dark text-center mb-3">Iniciar Sesión</h1>
 
       <Row>
         <Col>

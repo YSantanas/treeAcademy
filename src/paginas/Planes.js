@@ -7,7 +7,7 @@ import { Badge } from 'antd';
 const Planes = () => {
   return (
     <div className="container mt-2 mb-3">
-      <h1 className="text-center text-info py-3">Planes</h1>
+      <h1 className="text-center text-dark py-3">Planes</h1>
 
       <Row className="g-4 mb-5 align-items-center h-100 justify-content-center">
         <Col xs={12} lg={4} xl={3}>

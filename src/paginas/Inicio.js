@@ -10,7 +10,7 @@ const Inicio = () => {
       style={{ minHeight: "80vh", paddingTop: "2vh",textAlign:"center" }}
     >
       
-      <h1 className="text-center text-info">Quiénes Somos</h1>
+      <h1 className="text-center text-dark">Quiénes Somos</h1>
       <Card class="container justify-content-center"  style={{ width: "50", alignItems:"center" }}>
         <Card.Img
           variant="top"

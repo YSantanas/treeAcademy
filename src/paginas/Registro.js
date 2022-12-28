@@ -56,7 +56,7 @@ const Registro = () => {
       className=" container border justify-content-center alert alert-light"
       style={{ minHeight: 'auto', paddingTop: '2vh', marginTop: '5vh' }}
     >
-      <h1 className="text-center text-info">Registro</h1>
+      <h1 className="text-center text-dark">Registro</h1>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="name">
           <Form.Label>Nombre</Form.Label>
