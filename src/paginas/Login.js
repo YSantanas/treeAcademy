@@ -1,16 +1,38 @@
-import React from 'react';
 import { Button, Checkbox, Form, Input } from 'antd';
 import Login1 from '../assets/login1.png';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import { object, string } from 'yup';
+import { useFormik } from 'formik';
+import { login } from '../features/auth/auth.api';
+import { useDispatch, useSelector } from 'react-redux';
 
-const inicio = () => {
-  const onFinish = (values) => {
-    console.log('Success:', values);
-  };
-  const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
-  };
+const validationSchema = object().shape({
+  email: string()
+    .email('El email no es válido')
+    .required('El email es requerido'),
+  password: string().required('La contraseña es requerida'),
+});
+
+const Inicio = () => {
+  const dispatch = useDispatch();
+  const { values, handleChange, handleSubmit, isValid, errors } = useFormik({
+    initialValues: {
+      email: '',
+      password: '',
+    },
+    validationSchema,
+    validateOnMount: true,
+    onSubmit: (values) => {
+      dispatch(
+        login({
+          email: values.email,
+          password: values.password,
+        })
+      );
+    },
+  });
+
   return (
     <div
       className="container pt-3 border alert alert-light text-center"
@@ -26,29 +48,21 @@ const inicio = () => {
         <Col>
           <Form
             className="mb-3"
-            name="basic"
-            labelCol={{
-              span: 8,
-            }}
-            wrapperCol={{
-              span: 16,
-            }}
-            initialValues={{
-              remember: true,
-            }}
-            onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
+            labelCol={{ span: 8 }}
+            wrapperCol={{ span: 16 }}
+            initialValues={{ remember: false }}
             autoComplete="off"
+            onSubmitCapture={handleSubmit}
           >
             <Form.Item
-              label="Nombre"
-              name="username"
-              rules={[
-                {
-                  required: true,
-                  message: 'Por favor, introduce tu nombre!',
-                },
-              ]}
+              label="Email"
+              name="email"
+              value={values.email}
+              valuePropName="email"
+              onChange={handleChange}
+              help={errors.email}
+              validateStatus={errors.email ? 'error' : 'success'}
+              required
             >
               <Input />
             </Form.Item>
@@ -56,12 +70,12 @@ const inicio = () => {
             <Form.Item
               label="Contraseña"
               name="password"
-              rules={[
-                {
-                  required: true,
-                  message: 'Por favor, introduce tu contraseña!',
-                },
-              ]}
+              value={values.password}
+              valuePropName="password"
+              onChange={handleChange}
+              help={errors.password}
+              validateStatus={errors.password ? 'error' : 'success'}
+              required
             >
               <Input.Password />
             </Form.Item>
@@ -69,22 +83,14 @@ const inicio = () => {
             <Form.Item
               name="remember"
               valuePropName="checked"
-              wrapperCol={{
-                offset: 8,
-                span: 16,
-              }}
+              wrapperCol={{ offset: 8, span: 16 }}
             >
               <Checkbox>Recuerdame</Checkbox>
             </Form.Item>
 
-            <Form.Item
-              wrapperCol={{
-                offset: 8,
-                span: 16,
-              }}
-            >
-              <Button type="primary" htmlType="submit">
-                Enviar
+            <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+              <Button type="primary" htmlType="submit" disabled={!isValid}>
+                Iniciar Sesión
               </Button>
             </Form.Item>
           </Form>
@@ -93,4 +99,4 @@ const inicio = () => {
     </div>
   );
 };
-export default inicio;
+export default Inicio;

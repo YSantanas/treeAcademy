@@ -1,6 +1,6 @@
-import { ChakraProvider } from "@chakra-ui/react";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+import { ChakraProvider } from '@chakra-ui/react';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 import {
   Center,
@@ -12,25 +12,25 @@ import {
   Text,
   Button,
   CardFooter,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react';
 
-import cursoC1 from "../assets/cursosC/cursoC1.jpg";
-import cursoC2 from "../assets/cursosC/cursoC2.jpg";
-import cursoC3 from "../assets/cursosC/cursoC3.jpg";
-import cursoC4 from "../assets/cursosC/cursoC4.jpg";
-import cursoC5 from "../assets/cursosC/cursoC5.jpg";
-import cursoC6 from "../assets/cursosC/cursoC6.jpg";
+import cursoC1 from '../assets/cursosC/cursoC1.jpg';
+import cursoC2 from '../assets/cursosC/cursoC2.jpg';
+import cursoC3 from '../assets/cursosC/cursoC3.jpg';
+import cursoC4 from '../assets/cursosC/cursoC4.jpg';
+import cursoC5 from '../assets/cursosC/cursoC5.jpg';
+import cursoC6 from '../assets/cursosC/cursoC6.jpg';
 
 // se procede a manejar como arreglo los diferentes cursos con sus diferentes imagenes
 const fotos = [cursoC1, cursoC2, cursoC3, cursoC4, cursoC5, cursoC6];
-const nombres = ["Python", "Java", "React", "JavaScript", "C", "C++"];
+const nombres = ['Python', 'Java', 'React', 'JavaScript', 'C', 'C++'];
 const descripcion = [
-  "En este curso podras empezar desde el nivel básico para comprender el lenguaje.",
-  "En este curso podras empezar desde el nivel básico para comprender el lenguaje.",
-  "En este curso podras empezar desde el nivel básico para comprender esta biblioteca de Javascript.",
-  "En este curso podras empezar desde el nivel básico para comprender el lenguaje.",
-  "En este curso podras empezar desde el nivel básico para comprender el lenguaje.",
-  "En este curso podras empezar desde el nivel básico para comprender el lenguaje.",
+  'En este curso podras empezar desde el nivel básico para comprender el lenguaje.',
+  'En este curso podras empezar desde el nivel básico para comprender el lenguaje.',
+  'En este curso podras empezar desde el nivel básico para comprender esta biblioteca de Javascript.',
+  'En este curso podras empezar desde el nivel básico para comprender el lenguaje.',
+  'En este curso podras empezar desde el nivel básico para comprender el lenguaje.',
+  'En este curso podras empezar desde el nivel básico para comprender el lenguaje.',
 ];
 
 function CursosComputacion() {
@@ -47,15 +47,14 @@ function CursosComputacion() {
           {Array.from({ length: 6 }).map((_, idx) => (
             <Col className="col-md-3 pl-5 w-50">
               <Card
-                direction={{ base: "column", sm: "row" }}
+                direction={{ base: 'column', sm: 'row' }}
                 overflow="hidden"
                 variant="outline"
               >
                 <Image
-                
                   objectFit="cover"
-                  maxW={{ base: "100%", sm: "200px" }}
-                  boxSize='100%'
+                  maxW={{ base: '100%', sm: '200px' }}
+                  boxSize="100%"
                   src={fotos[idx]}
                   alt=""
                 />

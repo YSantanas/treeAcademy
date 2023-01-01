@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import { useDispatch } from 'react-redux';
 import { boolean, object, string } from 'yup';
 import { register } from '../features/auth/auth.api';
+import { useAuth } from '../hooks/useAuth';
 
 const validationSchema = object().shape({
   name: string().required('El nombre es requerido'),
@@ -25,31 +26,32 @@ const validationSchema = object().shape({
 
 const Registro = () => {
   const dispatch = useDispatch();
-  const { values, handleChange, handleSubmit, isValid } = useFormik({
-    initialValues: {
-      name: '',
-      lastname: '',
-      email: '',
-      password: '',
-      professor: false,
-    },
-    validationSchema,
-    validateOnMount: true,
-    onSubmit: (values) => {
-      console.log(values);
-      console.log('Formulario enviado');
+  useAuth();
+  const { values, handleChange, handleSubmit, isValid, isSubmitting } =
+    useFormik({
+      initialValues: {
+        name: '',
+        lastname: '',
+        email: '',
+        password: '',
+        professor: false,
+      },
+      validationSchema,
+      validateOnMount: true,
+      onSubmit: (values, { resetForm, setFormikState }) => {
+        dispatch(
+          register({
+            name: values.name,
+            lastname: values.lastname,
+            email: values.email,
+            password: values.password,
+            roles: values.professor ? ['PROFESSOR'] : ['ALUMN'],
+          })
+        );
 
-      dispatch(
-        register({
-          name: values.name,
-          lastname: values.lastname,
-          email: values.email,
-          password: values.password,
-          roles: values.professor ? ['PROFESSOR'] : ['ALUMN'],
-        })
-      );
-    },
-  });
+        resetForm();
+      },
+    });
 
   return (
     <div
@@ -120,7 +122,11 @@ const Registro = () => {
         </Form.Group>
 
         <div className="col-md-12 text-center ">
-          <Button variant="primary" type="submit" disabled={!isValid}>
+          <Button
+            variant="primary"
+            type="submit"
+            disabled={!isValid || isSubmitting}
+          >
             Enviar
           </Button>
         </div>

@@ -17,12 +17,8 @@ const imageStyle = {
 const images = [Inicio1, Inicio2, Inicio3];
 
 export const Carousel = () => {
-  const onChange = (currentSlide) => {
-    // console.log(currentSlide);
-  };
-
   return (
-    <AntCarousel afterChange={onChange} autoplay autoplaySpeed={5_000}>
+    <AntCarousel autoplay autoplaySpeed={5_000}>
       {images.map((image) => (
         <div key={image}>
           <div style={contentStyle}>
